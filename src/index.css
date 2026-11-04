@@ -1,0 +1,87 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --color-chai-dark: #23120b;
+  --color-chai-roast: #341a0f;
+  --color-chai-warm: #4a2818;
+  --color-chai-cream: #faf7f2;
+  --color-chai-sand: #f3ece1;
+  --color-chai-amber: #e66826;
+  --color-chai-gold: #d48b38;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #faf7f2;
+  color: #2c1810;
+  overflow-x: hidden;
+}
+
+.font-serif,
+.font-display {
+  font-family: var(--font-serif);
+}
+
+/* Custom delicate scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f3ece1;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbb49d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a98d73;
+}
+
+/* Atmospheric Chai Steam Animation */
+@keyframes chaiSteam {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  60% {
+    transform: translateY(-24px) scaleX(1.4) skewX(4deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-50px) scaleX(2) skewX(-4deg);
+    opacity: 0;
+  }
+}
+
+.animate-steam-1 {
+  animation: chaiSteam 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-steam-2 {
+  animation: chaiSteam 3.8s cubic-bezier(0.4, 0, 0.2, 1) infinite 1.1s;
+}
+
+.animate-steam-3 {
+  animation: chaiSteam 4.2s cubic-bezier(0.4, 0, 0.2, 1) infinite 2.2s;
+}
+
+/* Subtle floating aura */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 5s ease-in-out infinite;
+}

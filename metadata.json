@@ -1,0 +1,6 @@
+{
+  "name": "Chai Junction – Café & Food Website",
+  "description": "Chai Junction Café in Vijay Nagar, Indore. Artisanal kulhad chai, handcrafted coffees, gourmet sandwiches, and cozy café culture. Every Cup Has a Story.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
